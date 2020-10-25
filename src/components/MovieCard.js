@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const MovieCard = (props) => {
     const { movie } = props
     return (
-        <Link to={`/details/${movie.id}`}>
+        <Link to={`/movieSearchApp/${movie.id}`}>
             <div className="card">
                 <img 
                     className="card-image" 

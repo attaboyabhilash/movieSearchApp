@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Search from './components/Search'
 import Details from './components/Details'
@@ -20,15 +20,15 @@ const App = () => {
 
   return (
     <div className={darkMode ? "dark-mode container" : "light-mode container"}>
-      <BrowserRouter>
+      <Router>
         <Navbar toggleMode={toggleMode}/>
         <Switch>
           <MovieContextProvider >
-            <Route exact path="/" component={Search} />
-            <Route path="/details/:id" component={Details} />
+            <Route exact path="/movieSearchApp" component={Search} />
+            <Route path="/movieSearchApp/:id" component={Details} />
           </MovieContextProvider>
         </Switch>
-      </BrowserRouter>
+      </Router>
     </div>
   )
 }

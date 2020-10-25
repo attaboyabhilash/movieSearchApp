@@ -25,7 +25,7 @@ const Details = (props) => {
                 </div>
             ))}
             <div className="card-footer">
-                <Link to="/">Go Back</Link>
+                <Link to="/movieSearchApp">Go Back</Link>
             </div>
         </div>
     )
