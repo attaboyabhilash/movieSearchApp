@@ -1,0 +1,87 @@
+.toggles{
+  margin-top: 10px;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .toggle-slot {
+    position: relative;
+    height: 1.5em;
+    width: 3em;
+    border: 2px solid #292929;
+    border-radius: 10em;
+    background-color: white;
+    transition: background-color 250ms;
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot {
+    background-color: #374151;
+    border: 2px solid #e4e7ec;
+  }
+  
+  .toggle-button {
+    transform: translate(1.6em, 0.1em);
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background-color: #292929;
+    box-shadow: inset 0px 0px 0px 0.1em #121212;
+    transition: background-color 250ms, border-color 250ms, transform 500ms;
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .toggle-button {
+    background-color: #485367;
+    box-shadow: inset 0px 0px 0px 0.75em white;
+    transform: translate(0.15em, 0.1em);
+  }
+  
+  .sun-icon {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    color: #212121;
+  }
+  
+  .sun-icon-wrapper {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    opacity: 1;
+    transform: translate(0.2em, 0.1em) rotate(2deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(0.2em, 0.1em) rotate(0deg);
+  }
+  
+  .moon-icon {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    color: white;
+  }
+  
+  .moon-icon-wrapper {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    opacity: 0;
+    transform: translate(1.6em, 0.1em) rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+  }
+  
+  .toggle-checkbox:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(1.6em, 0.1em) rotate(-15deg);
+  }

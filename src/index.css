@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 0.5em;
+}
+
+a{
+  text-decoration: none;
+  color: #121212;
+}
+
+small {
+  font-size: 0.9rem;
+}
+
+.light-mode{
+  background-color: #F4F4F4;
+  color: #121212;
+}
+
+.dark-mode{
+  background-color: #15202B;
+  color: #FFF;
+}
+
+.dark-mode a{
+  color: #FFF;
+}
+
+.container{
+  margin: 0px auto;
+  width: 100%;
+  padding: 30px 20%;
+  position: relative;
+  min-height: 100vh;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+.navbar h1{
+  margin: 0px;
+}
+
+.searchForm{
+  margin: 50px auto 20px auto;
+  width: 400px;
+  position: relative;
+}
+
+.input{
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: 2px solid #121212;
+  margin-bottom: 1rem;
+  outline: none;
+  position: relative;
+}
+
+
+.dark-mode .input{
+  background-color: #F4F4F4;
+  border: 2px solid #F4F4F4;
+}
+
+.button{
+  position: absolute;
+  width: 45px;
+  height: 40px;
+  right: 0px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 10;
+}
+
+.searchIcon{
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  font-size: 1.6em;
+  color: #121212;
+}
+
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 70px auto;
+  grid-column-gap: 25px;
+  grid-row-gap: 50px;
+}
+
+.card {
+  position: relative;
+  padding: 1em;
+  border-radius: 10px;
+  width: 220px;
+  min-height: 475px;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+  margin: auto;
+  background-color: white;
+}
+
+.dark-mode .card{
+  background-color: #202e3d;
+}
+
+.card-title {
+  margin: 0.5rem 0px;
+  font-size: 1.3em;
+}
+
+.card-image {
+  margin: 0 auto;
+  display: block;
+}
+
+.card-footer{
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+}
+
+.card-footer span, .card-footer a{
+  color: aqua;
+}
+
+.card-details{
+  width: 100%;
+  min-height: 300px;
+  margin: 100px auto;
+  background-color: #FFF;
+  padding: 1em;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+}
+
+.dark-mode .card-details{
+  background-color: #202e3d;
+}
+
+.details{
+  display: flex;
+  justify-content: space-between;
+}
+
+.right{
+  padding: 0px 20px;
+}
+
+.right h2{
+  margin: 0px;
+  font-size: 1.6em;
+}
+
+.right small{
+  color: #444;
+}
+
+.dark-mode .right small{
+  color:  rgb(140, 140, 140);
+}
+
+.right p{
+  line-height: 1.6em;
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 600px) {
+  .container{
+    padding: 30px 10%;
+  }
+}
+
+
+@media only screen and (max-width: 500px) {
+  .navbar h1{
+    font-size: 1.4em;
+    margin-top: 5px;
+  }
+  .searchForm{
+    width: 100%;
+  }
+  .details{
+    display: grid;
+  }
+  .card-images{
+    margin: 0px auto;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .right{
+    padding: 0px 5px;
+  }
+  .right p{
+    margin-bottom: 50px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .container{
+    padding: 30px 5%;
+  }
+}
